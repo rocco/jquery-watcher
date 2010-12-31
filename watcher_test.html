@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+	<title>watcher jQuery plugin test page</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+</head>
+<body>
+	<div id="test_bootstrapper">
+		<div id="test">
+			Test.
+		</div>
+   </div>
+	<script src="watcher.jquery.js"></script>
+	<script>
+		$(function() {
+			$('#test').watch('innerHTML', function() {
+				alert($(this).html());
+			});
+			setTimeout(function() {
+				$('#test').html('new html');
+			}, 2500);
+		});
+	</script>
+</body>
+</html>
