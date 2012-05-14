@@ -7,7 +7,7 @@
 	       var timer;
 
 	       function watch() {
-	          if($(self).data(property + '-watch-abort') == true) {
+	          if($(self).data(property + '-watch-abort') === true) {
 	             timer = clearInterval(timer);
 	             $(self).data(property + '-watch-abort', null);
 	             return;
